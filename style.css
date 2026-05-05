@@ -12,11 +12,16 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
 }
 
 header {

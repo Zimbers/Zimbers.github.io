@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.project-card');
+    // Теперь следим не только за карточками, но и за заголовками секций
+    const items = document.querySelectorAll('.project-card, #projects h2, #about h2');
     
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -7,17 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.opacity = 1;
                 entry.target.style.transform = 'translateY(0)';
             } else {
-                // Сбрасываем состояние, чтобы анимация срабатывала каждый раз при прокрутке
+                // Ставим -50px, чтобы при появлении элемент плавно "уходил вниз" на свое место
                 entry.target.style.opacity = 0;
-                entry.target.style.transform = 'translateY(20px)';
+                entry.target.style.transform = 'translateY(-50px)';
             }
         });
     }, { threshold: 0.1 });
 
-    cards.forEach(card => {
-        card.style.opacity = 0;
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease-out';
-        observer.observe(card);
+    items.forEach(item => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(-50px)';
+        item.style.transition = 'all 0.8s ease-out'; // Чуть замедлил для большей плавности
+        observer.observe(item);
     });
 });
