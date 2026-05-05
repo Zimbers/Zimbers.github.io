@@ -58,7 +58,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80>') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('my-background.jpg') center/cover;
 }
 
 .accent { color: var(--accent-color); }
