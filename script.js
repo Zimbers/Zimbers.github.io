@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = 1;
                 entry.target.style.transform = 'translateY(0)';
+            } else {
+                // Сбрасываем состояние, чтобы анимация срабатывала каждый раз при прокрутке
+                entry.target.style.opacity = 0;
+                entry.target.style.transform = 'translateY(20px)';
             }
         });
     }, { threshold: 0.1 });

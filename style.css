@@ -74,6 +74,13 @@ nav {
     transition: 0.3s;
 }
 
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 77, 77, 0.4); /* Свечение под цвет акцента */
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
 #projects, #about { padding: 100px 10%; }
 
 .project-grid {
