@@ -74,7 +74,7 @@ nav {
     transition: 0.3s;
 }
 
-#projects { padding: 100px 10%; }
+#projects, #about { padding: 100px 10%; }
 
 .project-grid {
     display: grid;
@@ -108,7 +108,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 40px 10%;
+    padding: 40px 0;
 }
 
 .skill-tag {
